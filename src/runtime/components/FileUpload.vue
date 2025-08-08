@@ -305,6 +305,7 @@ defineExpose({
                     ...typeof fileDelete === 'object' ? fileDelete : undefined
                   }"
                   :aria-label="t('fileUpload.removeFile', { filename: (file as File).name })"
+                  :disabled="disabled"
                   :trailing-icon="fileDeleteIcon || appConfig.ui.icons.close"
                   :class="ui.fileTrailingButton({ class: props.ui?.fileTrailingButton })"
                   @click.stop.prevent="removeFile(index)"
